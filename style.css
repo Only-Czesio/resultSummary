@@ -17,67 +17,86 @@
 
   --font-size-paragraphs : 18px;
 
+  --size-of-result : 500px;
+
   --font-family: font-family: 'Hanken Grotesk', sans-serif;
 }
 * {
     margin: 0;
     font-family: var(--font-family);
 }
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,500;0,700;1,800&display=swap');
-
-.mainContainer {
-    background-color: var(--white);
+        header {
+            margin-bottom: 50px;
+            font-size: larger;
+            color: var(--pale-blue);
+        }
+            h1 {
+        text-align: left;
+    }
+        .showResult {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: linear-gradient(var(--light-slate-blue), var(--cobalt-blue));
+            border-radius: 15px;
+            height: var(--size-of-result);
+            width: 350px;
+        }
+.score {
+    color: var(--white);
+    background-color: rgb(62, 58, 250) !important;
+    font-size: 45px;
+    margin-bottom: 0;
+    height: 175px;
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bolder;
 }
-@media (max-width: 40rem) {
-
-    .showResult {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        background: linear-gradient(var(--light-slate-blue), var(--cobalt-blue));
-        border-bottom-left-radius: 15%;
-        border-bottom-right-radius: 15%;
-        height: 22rem;
-    }
-    header {
-        margin: 20px;
-        font-size: larger;
-        color: var(--pale-blue);
-    }
-    .score {
-        color: var(--white);
-        background-color: rgb(62, 58, 250)!important;
-        font-size: 45px;
-        height: 125px;
-        width: 125px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        font-weight: bolder;
-    }
-    .scoreOf {
-        margin-top: 15px;
-        color: var(--pale-blue);
-        font-size: 15px;
-    }
-    .scoreInWord {
-        color: var(--white);
-        font-size: 30px;
-        margin: 30px auto 10px auto;
-        font-weight: bold;
-    }
-    .details {
-        margin-top: 5px;
-        text-align: center;
-        width: 250px;
-        color: var(--pale-blue);
-    }
-    .summary {
+        .scoreOf {
+            margin-top: 15px;
+            color: var(--pale-blue);
+            font-size: 15px;
+        }
+    
+        .scoreInWord {
+            color: var(--white);
+            font-size: 30px;
+            margin: 30px auto 10px auto;
+            font-weight: bold;
+        }
+    
+        .details {
+            margin-top: 5px;
+            text-align: center;
+            width: 250px;
+            color: var(--pale-blue);
+        }
+            .summary {
         margin: 25px;
         font-size: 10px;
     }
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,500;0,700;1,800&display=swap');
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+.mainContainer {
+    background-color: var(--white);
+    height: 500px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
     .reaction {
         background-color: rgba(255, 87, 87,0.09);
     }
@@ -156,4 +175,25 @@
     .continue:hover {
         background: linear-gradient(var(--light-slate-blue), var(--cobalt-blue));
     }
+@media (max-width: 40rem) {
+    header {
+        margin: 20px;
+    }
+    .mainContainer {
+        display: block;
+        height: auto;
+        width: auto;
+    }
+    .showResult {
+        height: 22rem;
+        border-bottom-left-radius: 15%;
+        border-bottom-right-radius: 15%;
+        width: 375px;
+    }
+    .score {
+        height: 125px;
+        width: 125px;
+    }
+
+
 }
